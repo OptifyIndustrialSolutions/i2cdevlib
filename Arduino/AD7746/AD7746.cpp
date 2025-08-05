@@ -140,3 +140,8 @@ void AD7746::write_register(uint8_t addr,uint8_t data) {
 void AD7746::read_register(uint8_t addr, uint8_t *data) {
     I2Cdev::readByte(devAddr, addr, data);
 }
+
+void AD7746::read_multi_registers(uint8_t addr, uint8_t *data[4])
+{
+    I2Cdev::readBytes(devAddr, addr, 4, data[0]);
+}

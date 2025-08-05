@@ -178,6 +178,7 @@ class AD7746 {
         void writeCapDacBRegister(uint8_t data);
         void write_register(uint8_t addr,uint8_t data);
         void read_register(uint8_t addr, uint8_t *data);
+        void read_multi_registers(uint8_t addr, uint8_t *data[4]);
         
 
     private:
